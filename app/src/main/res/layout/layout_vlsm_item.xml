@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txt_NW"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NW"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/txt_FH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FH"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/txt_LH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LH"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/txt_BR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BR"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/txt_MASK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mask"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/txt_WILDCARD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WC"/>
+        <TextView
+            android:id="@+id/txt_HOSTS_AVAILABLE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="txt_HOSTS_AVAILABLE"/>
+        <TextView
+        android:id="@+id/txt_HOSTS_NEEDED"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="txt_HOSTS_NEEDED"/>
+        <TextView
+        android:id="@+id/txt_HOSTS_UNUSED"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="txt_HOSTS_NEEDED"/>
+
+        <ProgressBar
+            android:id="@+id/pb_USAGE"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:progress="90"
+            android:layout_marginStart="20dp" />
+    </LinearLayout>
+
+</RelativeLayout>

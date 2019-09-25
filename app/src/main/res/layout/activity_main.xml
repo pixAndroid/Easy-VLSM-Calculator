@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/toplayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/et_ip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="192.168.1.1"
+            android:inputType="number"
+            android:digits="0123456789."
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@id/et_prefix"/>
+        <EditText
+            android:id="@+id/et_prefix"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="/24"
+            android:inputType="number"
+            android:digits="0123456789"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@id/et_hosts"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/toplayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_add_hosts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Add"
+                android:enabled="false"/>
+
+            <EditText
+                android:id="@+id/et_hosts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/btn_add_hosts"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:hint="Add the required hosts"
+                android:digits="0123456789"/>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recylerlist_hosts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate VLSM"
+            android:textAllCaps="false"
+            android:id="@+id/btn_calculate"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recylerlist_vlsm_list"/>
+    </LinearLayout>
+
+</RelativeLayout>

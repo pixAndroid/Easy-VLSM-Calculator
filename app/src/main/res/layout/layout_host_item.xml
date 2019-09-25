@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_host"
+    android:padding="3dp"
+    android:layout_marginLeft="10dp">
+    <TextView
+        android:layout_marginLeft="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="N256 -"
+        android:id="@+id/txt_net_number"
+        android:textSize="16sp"/>
+    <TextView
+        android:layout_toRightOf="@+id/txt_net_number"
+        android:id="@+id/txt_host"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2150"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp" />
+    <ImageView
+        android:id="@+id/btn_remove_host"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_remove"
+        android:padding="3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/txt_host"/>
+</RelativeLayout>
