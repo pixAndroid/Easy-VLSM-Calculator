@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //VLSM
+    <attr name="mVlsmBackground" format="reference"/>
+    <attr name="mVlsmSetupTitleColor" format="reference"/>
+    <attr name="mVlsmEditTextColor" format="reference"/>
+
+    //EditText
+    <attr name="mVlsmEditTextLineColor" format="reference"/>
+
+    //Button Calculate
+    <attr name="nVlsmButtonColorPressed" format="reference"/>
+    <attr name="nVlsmButtonColorEnabled" format="reference"/>
+    <attr name="nVlsmButtonColorDisabled" format="reference"/>
+
+    //Button Clear
+    <attr name="nVlsmButtonClearColorPressed" format="reference"/>
+    <attr name="nVlsmButtonClearColorEnabled" format="reference"/>
+    <attr name="nVlsmButtonClearColorDisabled" format="reference"/>
+    <attr name="mAccentColor" format="reference"/>
+</resources>

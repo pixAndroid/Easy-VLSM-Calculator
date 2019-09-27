@@ -11,15 +11,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class VLSMadapter extends RecyclerView.Adapter<VLSMadapter.Holder> {
     private Context mCOntext;
     private List<VlsmModel> mVlsmList;
+    private ArrayList<Long> mHostsList;
 
-    public VLSMadapter(Context mCOntext, List<VlsmModel> mVlsmList) {
+    public VLSMadapter(Context mCOntext, List<VlsmModel> mVlsmList, ArrayList<Long> mHostsList) {
         this.mCOntext = mCOntext;
         this.mVlsmList = mVlsmList;
+        this.mHostsList = mHostsList;
     }
 
     @NonNull
@@ -31,17 +34,18 @@ public class VLSMadapter extends RecyclerView.Adapter<VLSMadapter.Holder> {
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {
-        holder.txtNW.setText("NW: " + mVlsmList.get(position).getNetwork() + " /" + mVlsmList.get(position).getPrefix());
-        holder.txtFH.setText("FH: " + mVlsmList.get(position).getFirstHost());
-        holder.txtLH.setText("LH: " + mVlsmList.get(position).getLastHost());
-        holder.txtBR.setText("BR: " + mVlsmList.get(position).getBroadcast());
-        holder.txtMASK.setText("Mask: " + mVlsmList.get(position).getMask());
-        holder.txtWILDCARD.setText("Wildcard: " + mVlsmList.get(position).getWildcard());
-        holder.txtHOSTSAVAILABLE.setText("HA: " + mVlsmList.get(position).getHosts_available());
-        holder.txtHOSTsNEEDED.setText("HN: " + mVlsmList.get(position).getHosts_needed());
-        holder.txtHOSTSUNUSED.setText("HU: " + mVlsmList.get(position).getHosts_unused());
-
+        holder.txtNETLABEL.setText("Network 0" + String.valueOf(mHostsList.indexOf(mVlsmList.get(position).getHosts_needed())+1));
+        holder.txtNW.setText(mVlsmList.get(position).getNetwork() + " /" + mVlsmList.get(position).getPrefix());
+        holder.txtFH.setText(mVlsmList.get(position).getFirstHost());
+        holder.txtLH.setText(mVlsmList.get(position).getLastHost());
+        holder.txtBR.setText(mVlsmList.get(position).getBroadcast());
+        holder.txtMASK.setText(mVlsmList.get(position).getMask());
+        holder.txtWILDCARD.setText(mVlsmList.get(position).getWildcard());
+        holder.txtHOSTSAVAILABLE.setText(String.valueOf(mVlsmList.get(position).getHosts_available()));
+        holder.txtHOSTsNEEDED.setText(String.valueOf(mVlsmList.get(position).getHosts_needed()));
+        holder.txtHOSTSUNUSED.setText(String.valueOf(mVlsmList.get(position).getHosts_unused()));
         holder.pbUSAGE.setProgress((int) mVlsmList.get(position).getPercentage());
+        holder.txtPERCENT.setText(holder.pbUSAGE.getProgress() + "%");
     }
 
     @Override
@@ -51,11 +55,12 @@ public class VLSMadapter extends RecyclerView.Adapter<VLSMadapter.Holder> {
 
     public class Holder extends RecyclerView.ViewHolder {
         private TextView txtNW, txtFH, txtLH, txtBR, txtMASK, txtWILDCARD,
-                txtHOSTsNEEDED,txtHOSTSAVAILABLE, txtHOSTSUNUSED;
+                txtHOSTsNEEDED,txtHOSTSAVAILABLE, txtHOSTSUNUSED, txtPERCENT, txtNETLABEL;
         private ProgressBar pbUSAGE;
 
         public Holder(@NonNull View itemView) {
             super(itemView);
+            txtNETLABEL = itemView.findViewById(R.id.txt_net_label);
             txtNW = itemView.findViewById(R.id.txt_NW);
             txtFH = itemView.findViewById(R.id.txt_FH);
             txtLH = itemView.findViewById(R.id.txt_LH);
@@ -65,6 +70,7 @@ public class VLSMadapter extends RecyclerView.Adapter<VLSMadapter.Holder> {
             txtHOSTsNEEDED = itemView.findViewById(R.id.txt_HOSTS_NEEDED);
             txtHOSTSAVAILABLE = itemView.findViewById(R.id.txt_HOSTS_AVAILABLE);
             txtHOSTSUNUSED = itemView.findViewById(R.id.txt_HOSTS_UNUSED);
+            txtPERCENT = itemView.findViewById(R.id.txt_percent);
             pbUSAGE = itemView.findViewById(R.id.pb_USAGE);
         }
     }

@@ -1,11 +1,33 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        //VLSM
+        <item name="mVlsmBackground">@color/colorGray</item>
+        <item name="mVlsmSetupTitleColor">@color/colorBlack</item>
+        <item name="mVlsmEditTextColor">@color/colorWhite</item>
+        <item name="nVlsmButtonColorPressed">@color/colorAccent</item>
+        <item name="nVlsmButtonColorEnabled">@color/colorWhite</item>
+        <item name="nVlsmButtonColorDisabled">?mVlsmBackground</item>
+
+        <item name="nVlsmButtonClearColorPressed">?nVlsmButtonColorEnabled</item>
+        <item name="nVlsmButtonClearColorEnabled">@color/colorRed3</item>
+        <item name="nVlsmButtonClearColorDisabled">?nVlsmButtonColorPressed</item>
+        <item name="mVlsmEditTextLineColor">@color/colorWhite</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
 </resources>

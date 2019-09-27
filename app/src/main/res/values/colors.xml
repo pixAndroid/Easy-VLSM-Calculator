@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#8DC26F</color>
+    <color name="colorPrimaryDark">#8DC26F</color>
+    <color name="colorAccent">#94D06A</color>
+<!--    <color name="colorAccent">#8FC966</color>-->
+
+    <color name="colorBrightGray">#F7F7F7</color>
+
+    <color name="colorDarkGreen">#3E9B22</color>
+    <color name="colorGr">#cc99ff</color>
+    <color name="colorBlue">#7983EA</color>
+    <color name="colorLightBlue">#0564ff</color>
+
+    <color name="colorDARKSLATEGRAY">#2F4F4F</color>
+    <color name="colorHONEYDEW">#F0FFF0</color>
+    <color name="colorWhite">#fff</color>
+    <color name="colorBlack">#2b4251</color>
+    <color name="colorExtraBlack">#202A30</color>
+
+    <color name="colorTransparentBlack">#80000000</color>
+    <color name="colorTransparentGray">#CC808B96</color>
+    <color name="colorTransparentBlue">#CC2196f3</color>
+
+    //Resource used colors
+    <color name="colorLightGreen">#57ff86</color>
+    <color name="colorRed">#FF5733</color>
+    <color name="colorGray">#808B96</color>
+    <color name="colorBLue">#2196f3</color>
+    <color name="colorRed3">#FF0B00</color>
+
+    // #A1FFCE #FAFFD1
+
+
+    <color name="colorToolbarItem">#2196f3</color>
+    <color name="colorTitleText">#fff</color>
+    <color name="colorTitleText_bg">#1D3333</color>
+    <color name="colorLightRed">#FF4224</color>
+    <color name="colorOptionsMenuIcons">#202A30</color>
+
+    <color name="colorGradientStart">#2F4F4F</color>
+    <color name="colorGradientEnd">#3e5b5b</color>
+
+
+    //VLSM
+    <color name="colorVlsmLightBlue">#8ACCFF</color>
+
+    //Attrs
+    <color name="mVlsmEditTextLineColor">#8ACCFF</color>
+
 </resources>

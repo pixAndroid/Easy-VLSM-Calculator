@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/toplayout"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_vlsm_config"
+        android:padding="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:elevation="5dp"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/txttit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="S E T U P     V L S M"
+            android:textSize="16sp"
+            android:paddingTop="3dp"
+            android:elevation="8dp"
+            android:paddingBottom="3dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/bg_vlsm_config_title"
+            android:textColor="@color/colorBrightGray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="1dp"
+                app:srcCompat="@drawable/ic_networkl"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/et_ip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:backgroundTint="?mVlsmEditTextLineColor"
+                android:digits="0123456789."
+                android:fontFamily="@font/varela_round"
+                android:hint="192.168.1.0"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:nextFocusForward="@id/et_prefix"
+                android:textColor="?mVlsmEditTextColor"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/et_prefix"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="?mVlsmEditTextLineColor"
+                android:digits="0123456789"
+                android:fontFamily="@font/varela_round"
+                android:hint="24"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:nextFocusForward="@id/et_hosts"
+                android:textColor="?mVlsmEditTextColor"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recylerlist_hosts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/imghh"
+                android:padding="2dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                app:srcCompat="@drawable/ic_computer"/>
+            <Button
+                android:id="@+id/btn_add_hosts"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:text="Add"
+                android:layout_marginTop="5dp"
+                android:textColor="@drawable/btn_add_text_color"
+                android:fontFamily="@font/roboto"
+                android:background="@drawable/btn_add"
+                android:enabled="false"/>
+
+            <EditText
+                android:id="@+id/et_hosts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/btn_add_hosts"
+                android:layout_toRightOf="@+id/imghh"
+                android:backgroundTint="?mVlsmEditTextLineColor"
+                android:digits="0123456789"
+                android:fontFamily="@font/varela_round"
+                android:hint="Add the required hosts"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:textColor="?mVlsmEditTextColor"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:fontFamily="@font/roboto"
+                android:background="@drawable/btn_clear"
+                android:textColor="@drawable/btn_clear_text_color"
+                android:text="Clear"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="C A L C U L A T E     V L S M"
+                android:textAllCaps="true"
+                android:fontFamily="@font/roboto"
+                android:background="@drawable/btn_calculate_vlsm"
+                android:id="@+id/btn_calculate"
+                android:textColor="@drawable/btn_vlsm_text_color"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="10dp"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
